@@ -1,9 +1,11 @@
-/*  my name is alireza hor
-    my email address is alirezafour@gmail.com
-    today is 14/oct/2015
+/*  name is alireza hor
+email address is alirezafour@gmail.com
+*/
+/* this code for print Hello world with c++
 */
 #include <stdio.h>
-int main() {
-  printf("Hello world\n");
-  return 0;
+int main()
+{
+	printf("Hello world\n"); // just print hello world
+	return 0;
 }
