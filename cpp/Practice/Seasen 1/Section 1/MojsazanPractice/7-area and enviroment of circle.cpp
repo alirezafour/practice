@@ -8,7 +8,7 @@ just get the radius after that calcute area and enviroment and print it
 
 int main()
 {
-	int radius;
+	int radius(0);
 	float nPi=3.14;
 	printf("Insert Radius : ");
 	std::cin>>radius;
