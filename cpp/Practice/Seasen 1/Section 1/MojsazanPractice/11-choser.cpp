@@ -14,26 +14,30 @@ else going to function3 and call (funtion1  * function2) and print ((number1 +nu
 #include <stdio.h>
 
 int function1(int a1,int a2)
-	{
-		return a1+a2;
-	}
+{
+	return a1+a2;
+}
 
-	int function2(int b1,int b2)
-	{
-		return b1-b2;
-	}
+int function2(int b1,int b2)
+{
+	return b1-b2;
+}
 
-	int function3(int c1,int c2) 
-	{
-		return (function1(c1,c2))*(function2(c1,c2));
-	}
+int function3(int c1,int c2) 
+{
+	return (function1(c1,c2))*(function2(c1,c2));
+}
 
-	int main(int argc, char const *argv[]) {
+int main(int argc, char const *argv[])
+{
 	int num1(0), num2(0), choser(0);
+
 	printf("Insert first number : ");
 	std::cin >> num1;
+
 	printf("Insert secend number : ");
 	std::cin >> num2;
+
 	printf("Insert Choser number :\n\nIF the number == 0 Print Number1 + Number2\nIF number < 0 Print Number1 - Number2\nElse Print (number1 + number2) * (number1 - number2)\n Insert Number : ");
 	std::cin >> choser;
 	
