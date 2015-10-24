@@ -1,7 +1,7 @@
 /* writed by alireza hor
  * email address is alirezafour@gmail.com
 */
-/* this code just say is your triangle is right or not
+/* this code just say your triangle is right or not
  * just get side 1 to 3 and compare & calcute with fisaghores (A*A = B*B + C*C)
  * after that just print your triangle is Right or not
 */
