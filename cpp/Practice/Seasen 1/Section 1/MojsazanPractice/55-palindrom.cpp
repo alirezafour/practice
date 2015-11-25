@@ -59,7 +59,7 @@ int main(int argc, char **argv)
 	int num;
 	int choser = 0;
 	printf("1- tell you is your number is palindrom or not.\n2- tell your all palindrom low than your number.\n3- tell all number calcute by sum and mul is palindrom.\n\n");
-	printf("insert your number for process: ");
+	printf("insert your chose number: ");
 	scanf("%d", &choser);
 	printf("insert your number for process: ");
 	scanf("%d", &num);
