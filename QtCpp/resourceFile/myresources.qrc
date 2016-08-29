@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/MyFiles">
+        <file>resourceFile.pro</file>
+    </qresource>
+    <qresource prefix="/new/prefix1">
+        <file>main.cpp</file>
+    </qresource>
+</RCC>

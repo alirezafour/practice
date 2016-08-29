@@ -1,5 +1,8 @@
 #build file
-build*
+build-*
 
 #pro user file
 *.pro.user
+
+#out file
+*.out
