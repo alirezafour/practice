@@ -6,6 +6,7 @@
 #include <QtGui>
 #include <QTreeWidgetItem>
 
+
 namespace Ui {
 class Dialog;
 }
@@ -23,6 +24,8 @@ public:
 
 private slots:
     void on_pushButton_clicked();
+
+    void on_pushButton2_clicked();
 
 private:
     Ui::Dialog *ui;
