@@ -1,0 +1,9 @@
+ 
+img {
+	width:400px;
+	height:200px;
+}
+
+table, td {
+	border: 1px #70b8ff dashed;
+}
