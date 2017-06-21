@@ -1,0 +1,12 @@
+
+h3 {
+    color: #ccccFF;
+}
+p{
+    color: green;
+    font-family: Tahoma;
+    font-size: 1em; /*it's going to be default size of the device. better than 12px or something*/
+}
+body{
+    background-color: black;
+}
