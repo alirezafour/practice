@@ -21,10 +21,13 @@ body {
 }
 
 h1 {
-  color: hls(350, 58.8%, 42.0%); /* HLS version of Coloring (WORK ON CSS3) */
+  color: rgb(100, 200, 100);
+  color: hsl(350, 58.8%, 42.0%); /* HLS version of Coloring (WORK ON CSS3) */
+  color: hsla(350, 58.8%, 42.0%, 0.8); /* if it support HLSa it going to be chose instead of hls */
   /*
   background-color: Aqua; Coloring with Name */
   
+  background-color: rgb(2, 93, 140); /* having backup color for Older browsers ( the lattest color always chose if it not the backup use instead */
   background-color: rgba(2, 93, 140, 0.6); /* RGBa version with Opacity ( you can make a transparent color ) */
   font-family: 'Covered By Your Grace', sans-serif;
   font-size: 100px;
