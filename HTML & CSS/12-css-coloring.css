@@ -22,7 +22,10 @@ body {
 
 h1 {
   color: hls(350, 58.8%, 42.0%); /* HLS version of Coloring (WORK ON CSS3) */
-  background-color: Aqua; /*Coloring with Name */
+  /*
+  background-color: Aqua; Coloring with Name */
+  
+  background-color: rgba(2, 93, 140, 0.6); /* RGBa version with Opacity ( you can make a transparent color ) */
   font-family: 'Covered By Your Grace', sans-serif;
   font-size: 100px;
   line-height: 76px;
