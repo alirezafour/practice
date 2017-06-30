@@ -35,7 +35,7 @@ public:
      * @brief headerData it Display the custom header for some view that support that
      * @param section the place that header is going to be
      * @param orientation for now it's just horizental cuz we just have a string list
-     * @param role for now we only support one roll
+     * @param role we are supporting many roll for more advantage
      * @return the header that should show in the view header
      */
     QVariant headerData(int section, Qt::Orientation orientation, int role) const override;
@@ -52,7 +52,7 @@ public:
      * @param index index of the item that we select for edit
      * @param value the value we want to change the old data to
      * @param role check if it's editable or not by default it's Editrole that we use
-     * @return the flag that show the edit was successful or not
+     * @return the flag that show the edit was successful or not and it used by delegate
      */
     bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole) override;
 

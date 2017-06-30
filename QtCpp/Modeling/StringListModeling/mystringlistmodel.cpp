@@ -21,8 +21,8 @@ QVariant MyStringListModel::data(const QModelIndex &index, int role) const
     if(index.row() >= stringList.size())
         return QVariant();
 
-    //we only support this role for now
-    if(role == Qt::DisplayRole)
+    //we are just support this 2 role for now
+    if(role == Qt::DisplayRole || role == Qt::EditRole)
         return stringList.at(index.row());
     else
         return QVariant();
@@ -52,9 +52,12 @@ Qt::ItemFlags MyStringListModel::flags(const QModelIndex &index) const
 
 bool MyStringListModel::setData(const QModelIndex &index, const QVariant &value, int role)
 {
+    //first we need to be sure that index is valid and the roll is the correct one
+    //the EditRole used by delegate
     if(index.isValid() && role == Qt::EditRole)
     {
         stringList.replace(index.row(), value.toString());
+        //emit that data changed for the view to know and update it self
         emit dataChanged(index, index);
         return true;
     }
