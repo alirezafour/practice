@@ -41,3 +41,23 @@ QVariant MyStringListModel::headerData(int section, Qt::Orientation orientation,
         return QString("Row %1").arg(section);
 }
 
+Qt::ItemFlags MyStringListModel::flags(const QModelIndex &index) const
+{
+    if(!index.isValid())
+        return Qt::ItemIsEnabled;
+
+    //delegate check if item editable or not and set every Item flag Editable
+    return QAbstractItemModel::flags(index) | Qt::ItemIsEditable;
+}
+
+bool MyStringListModel::setData(const QModelIndex &index, const QVariant &value, int role)
+{
+    if(index.isValid() && role == Qt::EditRole)
+    {
+        stringList.replace(index.row(), value.toString());
+        emit dataChanged(index, index);
+        return true;
+    }
+    return false;
+}
+
