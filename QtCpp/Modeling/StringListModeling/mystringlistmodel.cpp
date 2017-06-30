@@ -8,6 +8,8 @@ MyStringListModel::MyStringListModel(const QStringList &strings, QObject *parent
 
 int MyStringListModel::rowCount(const QModelIndex &parent) const
 {
+    Q_UNUSED(parent);
+
     return stringList.count();
 }
 
@@ -62,5 +64,39 @@ bool MyStringListModel::setData(const QModelIndex &index, const QVariant &value,
         return true;
     }
     return false;
+}
+
+bool MyStringListModel::insertRows(int position, int rows, const QModelIndex &index)
+{
+    Q_UNUSED(index);
+
+    //it tells other components and ... that the row is going to be change
+    beginInsertRows(QModelIndex(), position, position+rows-1);
+
+    for(int row = 0; row < rows; ++row)
+    {
+        stringList.insert(position, ""); //adding empty string to the list
+    }
+
+    //it tells other we finished changing rows
+    endInsertRows();
+    return true;
+}
+
+bool MyStringListModel::removeRows(int position, int rows, const QModelIndex &index)
+{
+    Q_UNUSED(index);
+
+    //this allows other components to access the data before it becomes unavailable
+    beginRemoveRows(QModelIndex(), position, position+rows-1);
+
+    for(int row = 0; row < rows; ++row)
+    {
+        stringList.removeAt(position); //remove the string from the list at the position
+    }
+
+    //emits that we are finishing and let other components know that the dimensions of the model have changed
+    endRemoveRows();
+    return true;
 }
 

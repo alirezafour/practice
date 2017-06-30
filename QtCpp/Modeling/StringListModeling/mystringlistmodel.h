@@ -56,6 +56,24 @@ public:
      */
     bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole) override;
 
+    /**
+     * @brief insertRows insert a empty string row to the list
+     * @param position the position that we are going to add the empty string
+     * @param rows the number of rows that we want to insert
+     * @param index we are not going to use it for now
+     * @return the success for delegate
+     */
+    bool insertRows(int position, int rows, const QModelIndex &index = QModelIndex()) override;
+
+    /**
+     * @brief removeRows delete the row from the string list
+     * @param position the position that we are going to delete row
+     * @param rows the number of rows that we want to delete
+     * @param index we are not going to use it for now
+     * @return the success for delegate
+     */
+    bool removeRows(int position, int rows, const QModelIndex &index = QModelIndex()) override;
+
 private:
     /**
      * @brief stringList the list of data we going to store in it or show from it
